@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --color-gold-50: #fcf9ee;
+  --color-gold-100: #f7f1d4;
+  --color-gold-200: #eedda9;
+  --color-gold-300: #e2c273;
+  --color-gold-400: #d5a647;
+  --color-gold-500: #c9a84c;
+  --color-gold-600: #aa8437;
+  --color-gold-700: #88622b;
+  --color-gold-800: #6a4925;
+  --color-gold-900: #553a1f;
+}
+
+@keyframes shine {
+  0% { left: -150%; }
+  50% { left: 150%; }
+  100% { left: 150%; }
+}
+
+.animate-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4) 30%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0.4) 70%,
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: shine 4s infinite ease-in-out;
+}

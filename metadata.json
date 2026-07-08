@@ -1,0 +1,6 @@
+{
+  "name": "Calendario Digital 2026",
+  "description": "Página de ventas del exclusivo calendario digital 2026 de la modelo IA chilena, con 12 meses de fotos únicas inspiradas en paisajes de Chile.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
